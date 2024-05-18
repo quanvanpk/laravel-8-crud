@@ -12,8 +12,8 @@ MySql >= 5.7 \
 Composer
 ----
 **Install Application:** \
-Clone source from Git: `git clone https://github.com/QuanVan95/mini-aspire.git` \
-`cd mini-aspire`
+Clone source from Git: `git clone https://github.com/quanvanpk/laravel-8-crud.git` \
+`cd laravel-8-crud`
 
 Step 1: Run command to install packages\
 `composer install`
@@ -27,7 +27,7 @@ Example: (Using MySQL)
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3366
-DB_DATABASE=mini-aspire
+DB_DATABASE=laravel-8-crud
 DB_USERNAME=root
 DB_PASSWORD=deadface
 ```
@@ -60,14 +60,14 @@ or you can set manually `http://127.0.0.1:8000`
 ----
 API List:
 
-| Name      | Method | Param Example | Note |Endpoint |
-| ----------- | ----------- | ----------- | ----------- |----------- |
-|   Register User    | POST|{"name": "Quan Van","email": "quanvan1995@gmail.com","password": "123456"} | | /api/v1/auth/register|
-|   Login    | POST|{"email": "miniaspire@gmail.com","password": "123456","remember_me": 1} | |/api/v1/auth/login|
-|   Logout    | POST| | | /api/v1/auth/logout|
-|   Create Loan    | POST| {"amount": 2000,"repayment_frequency": "Week"}| | /api/v1/loans|
-|   Get Loan Detail    | GET |  | | /api/v1/loans/{loanId}
-|   Update Loan    | PUT | {"repayment_frequency": "Week","status": "Cancelled"}  | Status will be: Open, Approved, Completed, Cancelled  |/api/v1/loans/{loanId}|
-|   Delete Loan    | DELETE | | Using soft delete | /api/v1/loans/{loanId}|
-|   Create Loan Repayment    | POST | {"loan_id": 4,"amount": 200,"note": "Weekly Repayment"}|  |  /api/v1/repayments|
-|   Get Loan Repayment Detail    | GET |  | | /api/v1/repayments/{loanRepaymentId}|
+| Name      | Method | Param Example                                                              | Note |Endpoint |
+| ----------- | ----------- |----------------------------------------------------------------------------| ----------- |----------- |
+|   Register User    | POST| {"name": "Quan Van","email": "quanvan1995@gmail.com","password": "123456"} | | /api/v1/auth/register|
+|   Login    | POST| {"email": "test01@gmail.com","password": "123456","remember_me": 1}        | |/api/v1/auth/login|
+|   Logout    | POST|                                                                            | | /api/v1/auth/logout|
+|   Create Loan    | POST| {"amount": 2000,"repayment_frequency": "Week"}                             | | /api/v1/loans|
+|   Get Loan Detail    | GET |                                                                            | | /api/v1/loans/{loanId}
+|   Update Loan    | PUT | {"repayment_frequency": "Week","status": "Cancelled"}                      | Status will be: Open, Approved, Completed, Cancelled  |/api/v1/loans/{loanId}|
+|   Delete Loan    | DELETE |                                                                            | Using soft delete | /api/v1/loans/{loanId}|
+|   Create Loan Repayment    | POST | {"loan_id": 4,"amount": 200,"note": "Weekly Repayment"}                    |  |  /api/v1/repayments|
+|   Get Loan Repayment Detail    | GET |                                                                            | | /api/v1/repayments/{loanRepaymentId}|
